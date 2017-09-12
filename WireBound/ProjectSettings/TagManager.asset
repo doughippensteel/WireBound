@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GroundCheck
+  - SpawnPoint
+  - MovingPlatform
+  - HUD
+  - PointsText
+  - Enemy
+  - Inventory1
+  - Inventory2
+  - Weapon
+  - DefaultTarget
+  - Destructable
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Player
+  - Climbable
+  - Enemy
+  - PickUps
+  - Hazzards
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3170690351
+    locked: 0
+  - name: Platforms
+    uniqueID: 3698262523
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
