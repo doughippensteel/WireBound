@@ -5,15 +5,24 @@ using UnityEngine;
 public class DestructableObject : MonoBehaviour {
 
 	public float health = 1;
-	bool isDestroyed = false;
+	public bool isDestroyed = false;
+
+	public Animator anim;
 
 	// Use this for initialization
+	public void awake (){
+		anim = GetComponent<Animator> ();
+
+	}
+
 	void Start () {
+
+
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+protected virtual  void Update () {
 		if (isDestroyed == true){
 			Destruct ();
 		}
@@ -26,9 +35,11 @@ public class DestructableObject : MonoBehaviour {
 			isDestroyed = true;
 		}
 	}
-
-	void Destruct()
+	// Destroy the destructable.
+	protected virtual void Destruct()
 	{
-		Destroy (this.gameObject);
+		Debug.Log("Destroying" + gameObject.name);
+		Destroy (this.gameObject, 1f);
+
 	}
 }

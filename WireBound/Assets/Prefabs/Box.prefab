@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 212069823851804924}
   - component: {fileID: 61049792623606504}
   - component: {fileID: 50194187812338530}
-  - component: {fileID: 114587829050866876}
+  - component: {fileID: 114703278893040322}
+  - component: {fileID: 95400009405680638}
   m_Layer: 0
   m_Name: Box
   m_TagString: Destructable
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1346282640375618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.1, y: 46.7, z: 0}
+  m_LocalPosition: {x: -3.9351578, y: 0.69037855, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,7 +89,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114587829050866876
+--- !u!95 &95400009405680638
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346282640375618}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ccbb752407557b439bf92770b3c0e62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114703278893040322
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,10 +114,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1346282640375618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8bb79aef945f6b4380dee4943b619e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 018eff74ebc2719499ff7258ed11e6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  isDestroyed: 0
+  anim: {fileID: 0}
+  coll: {fileID: 0}
+  rig: {fileID: 0}
 --- !u!212 &212069823851804924
 SpriteRenderer:
   m_ObjectHideFlags: 1
