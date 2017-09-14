@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 50101509689674806}
   - component: {fileID: 212150144948525734}
   - component: {fileID: 95330839205203784}
-  - component: {fileID: 114591455092467484}
   - component: {fileID: 114137000425311296}
   - component: {fileID: 114213347184591924}
   m_Layer: 9
@@ -99,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809339307830338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1898154, y: 0.103248484, z: 0}
+  m_LocalPosition: {x: 6.031269, y: 3.015047, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4202161276788126}
@@ -156,8 +155,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0040045977, y: -0.11872184}
-  m_Size: {x: 0.39, y: 1.7649236}
+  m_Offset: {x: -0.0040045977, y: -0.10780984}
+  m_Size: {x: 0.39, y: 1.7867476}
   m_Direction: 0
 --- !u!95 &95330839205203784
 Animator:
@@ -230,26 +229,6 @@ MonoBehaviour:
   gameControl: {fileID: 0}
   weaponSprites:
   - {fileID: 21300000, guid: 0bb667c38b5e0674d88b9814012c3335, type: 3}
---- !u!114 &114591455092467484
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1809339307830338}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e726fc68fa0c36243b3781368ae3052d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityModifier: 1
-  minGroundNormalY: 0.65
-  grounded: 0
-  maxSpeed: 7
-  jumpTakeOffSpeed: 10
-  climbSpeed: 7
-  maxHorizontalJump: 5
-  climbable: 0
-  movingRight: 1
 --- !u!212 &212024201190804340
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -303,6 +303,14 @@ MonoBehaviour:
       serializedVersion: 2
       rgba: 4294902015
     prefab: {fileID: 1346282640375618, guid: d03ab2f99ef71464fbd54c9f3f33cf42, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4285595647
+    prefab: {fileID: 1576679560443250, guid: 1e897bd521b0ebe439dd8a84d5be3917, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4279107328
+    prefab: {fileID: 1818081559523806, guid: a696658ee2a5178459d1b5f676832c00, type: 2}
 --- !u!4 &585186646
 Transform:
   m_ObjectHideFlags: 0
@@ -984,11 +992,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114452425975458516, guid: 6ff4e65855032444b9886d5f920c2548,
-        type: 2}
-      propertyPath: pickUps.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4586011240568132, guid: 6ff4e65855032444b9886d5f920c2548, type: 2}
       propertyPath: m_LocalPosition.x
       value: 16.5
@@ -1021,34 +1024,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114452425975458516, guid: 6ff4e65855032444b9886d5f920c2548,
-        type: 2}
-      propertyPath: pickUps.Array.data[0]
-      value: 
-      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 114452425975458516, guid: 6ff4e65855032444b9886d5f920c2548,
-        type: 2}
-      propertyPath: pickUps.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300056, guid: 4e3e601704f036f458f13f5e4fb0bb58,
-        type: 3}
-    - target: {fileID: 114452425975458516, guid: 6ff4e65855032444b9886d5f920c2548,
-        type: 2}
-      propertyPath: slotOne
-      value: 
-      objectReference: {fileID: 1794404943}
-    - target: {fileID: 114452425975458516, guid: 6ff4e65855032444b9886d5f920c2548,
-        type: 2}
-      propertyPath: pickUps.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300026, guid: 15da315548902cb43b8473bc4488b445,
-        type: 3}
-    - target: {fileID: 114452425975458516, guid: 6ff4e65855032444b9886d5f920c2548,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1809339307830338, guid: 093adb65aeca66546a20a1eadd412d26,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ff4e65855032444b9886d5f920c2548, type: 2}
   m_IsPrefabParent: 0

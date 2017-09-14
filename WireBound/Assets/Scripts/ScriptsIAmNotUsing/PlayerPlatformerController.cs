@@ -22,7 +22,7 @@ public class PlayerPlatformerController : PhysicsObject {
 	// Use this for initialization
 	void Awake () {
 		spriteRenderer = GetComponent<SpriteRenderer> ();
-		anim = GetComponent<Animator> ();
+		anim = GetComponent <Animator> ();
 		transform.parent = null;
 	
 	}

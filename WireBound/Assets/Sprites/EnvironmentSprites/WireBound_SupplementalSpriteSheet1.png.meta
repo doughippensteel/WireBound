@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 15da315548902cb43b8473bc4488b445
-timeCreated: 1505353509
+timeCreated: 1505403787
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -21,8 +21,8 @@ TextureImporter:
     21300028: WireBound_SupplementalSpriteSheet1_14
     21300030: Blank_Button
     21300032: Elevator_Carriage
-    21300034: WireBound_SupplementalSpriteSheet1_17
-    21300036: WireBound_SupplementalSpriteSheet1_18
+    21300034: Door_Anim_1
+    21300036: Door_Anm_2
     21300038: Door_Anim_3
     21300040: ElevatorTarget
     21300042: WireBound_SupplementalSpriteSheet1_21
@@ -291,7 +291,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: WireBound_SupplementalSpriteSheet1_17
+      name: Door_Anim_1
       rect:
         serializedVersion: 2
         x: 200
@@ -304,7 +304,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: WireBound_SupplementalSpriteSheet1_18
+      name: Door_Anm_2
       rect:
         serializedVersion: 2
         x: 300
