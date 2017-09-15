@@ -9,8 +9,9 @@ public class BreakableBox : DestructableObject {
 	public Rigidbody2D rig;
 
 	// Use this for initialization
-	void Start () {
-		anim = GetComponent<Animator> ();
+	protected override void Start () {
+		base.Start ();
+
 		rig = GetComponent<Rigidbody2D> ();
 		coll = GetComponent<BoxCollider2D> ();
 		coll.enabled = true;

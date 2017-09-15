@@ -38,6 +38,18 @@ public class GameControl : MonoBehaviour {
 	Image slotTwo;
 	#endregion
 
+	void Awake()
+	{
+		#region Singleton
+		if (gameControl == null)
+			gameControl = this;
+		else if  (gameControl != null)
+			Destroy (gameObject);
+
+		DontDestroyOnLoad (gameObject);
+		#endregion
+	}
+
 	// Use this for initialization
 	void Start () {
 
