@@ -27,12 +27,11 @@ public class LootBox : BreakableBox {
 	protected override void Destruct ()
 	{
 		base.Destruct ();
-		//part.Play ();
-		//burstVal = part.emission.burstCount;
+
 		part.Emit (burstVal);
-		//part.Stop ();
+	
 		Debug.Log (burstVal + "," + part.particleCount);
-		//gameControl.AddPoints (burstVal);
+		rig.isKinematic = true;
 		AddScore();
 	}
 	void AddScore()

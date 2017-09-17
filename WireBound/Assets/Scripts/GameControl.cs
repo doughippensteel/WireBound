@@ -7,11 +7,16 @@ public class GameControl : MonoBehaviour {
 
 	#region PublicClasses
 	public static GameControl gameControl;
+	public static CameraBehavior camB;
 	public Weapon weaponScript;
+	public Player playerScript;
+
+
 	#endregion
 
 	#region PublicVariables
-	public int playerLives;
+	public int playerMaxHealth;
+	public int currentPlayerHealth;
 	public int currentPoints;
 
 	public string weapon = null;
@@ -31,11 +36,13 @@ public class GameControl : MonoBehaviour {
 	public GameObject spawnPoint;
 	public GameObject player;
 
-	public static CameraBehavior camB;
-	Rigidbody2D rig;
+
+	//public Slider healthSlider;
+	Rigidbody2D playerRig;
 	Text pointsText;
 	Image slotOne;
 	Image slotTwo;
+
 	#endregion
 
 	void Awake()
@@ -53,9 +60,11 @@ public class GameControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		playerMaxHealth = 2;
+
 		currentPoints = startingPoints;
 		gameControl = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameControl> ();
-
+		playerScript = player.GetComponent<Player> ();
 		camB = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<CameraBehavior> ();
 		StartCoroutine(SpawnPlayer ());
 
@@ -64,6 +73,7 @@ public class GameControl : MonoBehaviour {
 		slotOne = GameObject.FindGameObjectWithTag ("Inventory1").GetComponent<Image> ();
 		slotTwo = GameObject.FindGameObjectWithTag ("Inventory2").GetComponent<Image> ();
 
+		//healthSlider.maxValue = playerMaxHealth;
 	}
 	
 	// Update is called once per frame
@@ -79,6 +89,10 @@ public class GameControl : MonoBehaviour {
 		if (currentPoints < 0)
 			currentPoints = 0;
 
+
+		//Debug.Log (currentPlayerHealth + "," + playerScript.health);
+		//healthSlider.value = currentPlayerHealth
+
 	}
 
 	public void AddPoints(int pointsToAdd){
@@ -91,15 +105,14 @@ public class GameControl : MonoBehaviour {
 
 		Debug.Log ("Spawn Attempt");
 		spawnPoint = GameObject.FindGameObjectWithTag ("SpawnPoint");
-		if (playerLives >=0) {
+
 			Instantiate (player, spawnPoint.transform.position, spawnPoint.transform.rotation);
 			camB.SetTarget ();
-			rig = player.GetComponent<Rigidbody2D> ();
-			rig.velocity = new Vector2 (0, 0);
+			playerRig = player.GetComponent<Rigidbody2D> ();
+			playerRig.velocity = new Vector2 (0, 0);
 			SetWeapon (weapon);
-		} else {
-			Debug.Log ("Game Over");
-		}
+
+
 	}
 
 	 void DepricatePoints(){
