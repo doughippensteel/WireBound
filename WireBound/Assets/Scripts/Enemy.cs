@@ -21,6 +21,8 @@ public class Enemy : Character {
 	Transform wallCheck;
 	Rigidbody2D eRig;
 	Animator anim;
+	BoxCollider2D bColl;
+
 
 	// Use this for initialization
 	protected override void Start () {
@@ -30,6 +32,7 @@ public class Enemy : Character {
 		eRig = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator>();
 		spray = GetComponent <ParticleSystem> ();
+		bColl = GetComponent<BoxCollider2D> ();
 	}
 
 	// Update is called once per frame
@@ -42,8 +45,10 @@ public class Enemy : Character {
 			moveRight = !moveRight;
 		}
 
-		if (isDead == true)
+		if (isDead == true) {
+			bColl.enabled = false;
 			Spray ();
+		}
 
 
 

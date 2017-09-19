@@ -29,6 +29,8 @@ public class PlayerCharacterController : MonoBehaviour {
 	private Rigidbody2D rig;
 	private SpriteRenderer spriteRend;
 	private Animator anim;
+
+
 	#endregion
 
 
@@ -100,6 +102,8 @@ public class PlayerCharacterController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+
+
 
 	}
 	void OnCollisionEnter2D (Collision2D other)

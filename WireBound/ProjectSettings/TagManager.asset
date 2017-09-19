@@ -15,6 +15,7 @@ TagManager:
   - Weapon
   - DefaultTarget
   - Destructable
+  - HealthBar
   layers:
   - Default
   - TransparentFX

@@ -52,7 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponScript: {fileID: 0}
-  playerLives: 1
+  playerScript: {fileID: 0}
+  playerMaxHealth: 0
+  currentPlayerHealth: 0
   currentPoints: 0
   weapon: 
   pickUps:

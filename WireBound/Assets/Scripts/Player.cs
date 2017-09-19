@@ -10,13 +10,15 @@ public class Player : Character {
 
 	public bool armed = false;
 
+
 	Animator anim;
 
 	// Use this for initialization
 	protected override void Start () {
 		
 		//FIXME: This way of accessing UI Slider is not implicit enough, could cause confusion if additional sliders are added.
-		healthBar = FindObjectOfType <Slider>();
+		healthBar = GameObject.FindGameObjectWithTag("HUD").GetComponentInChildren<Slider>();  	// This seems more optimal than
+																								//FindObjectOfType <Slider>();
 		Debug.Log (transform.position);
 		anim = GetComponent<Animator>();
 		gameControl = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameControl> ();
@@ -26,6 +28,8 @@ public class Player : Character {
 		healthBar.maxValue = gameControl.playerMaxHealth;
 		health = gameControl.playerMaxHealth;
 		Debug.Log (health);
+	
+
 	}
 	
 	// Update is called once per frame
@@ -47,6 +51,9 @@ public class Player : Character {
 		}
 	
 		healthBar.value = health;
+
+
+	
 	}
 
 

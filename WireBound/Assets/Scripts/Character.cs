@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour {
 
-	public int health = 2;
+public class Character : MonoBehaviour 
+
+{
+
+
+	public int health = 1;
 	public int attackDamage = 1;
 	public bool isDead = false;
+
+
 
 	// Use this for initialization
 	protected virtual void Start () {
