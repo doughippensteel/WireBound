@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestructableObject : MonoBehaviour {
+	public Quaternion startRotation;
 
 	public float health = 1;
 	public bool isDestroyed = false;
 
 	public Animator anim;
 
+
 	// Use this for initialization
 	public void awake (){
-		anim = GetComponent<Animator> ();
+		startRotation = transform.rotation;
 
 	}
 
@@ -39,6 +41,7 @@ protected virtual  void Update () {
 	protected virtual void Destruct()
 	{
 		Debug.Log("Destroying" + gameObject.name);
+		transform.rotation =  startRotation;
 		Destroy (this.gameObject, 1f);
 
 	}

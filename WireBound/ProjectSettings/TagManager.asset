@@ -16,6 +16,7 @@ TagManager:
   - DefaultTarget
   - Destructable
   - HealthBar
+  - ShopPanel
   layers:
   - Default
   - TransparentFX

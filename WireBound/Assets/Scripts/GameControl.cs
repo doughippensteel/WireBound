@@ -8,7 +8,7 @@ public class GameControl : MonoBehaviour {
 
 	#region PublicClasses
 	public static GameControl gameControl;
-	public static CameraBehavior camB;
+
 	public Weapon weaponScript;
 	public Player playerScript;
 
@@ -48,10 +48,7 @@ public class GameControl : MonoBehaviour {
 
 	#endregion
 
-	void OnEneable()
-	{
-		SceneManager.sceneLoaded += LevelSetUp;
-	}
+
 
 	void Awake()
 	{
@@ -76,7 +73,7 @@ public class GameControl : MonoBehaviour {
 
 		gameControl = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameControl> ();
 		playerScript = player.GetComponent<Player> ();
-		camB = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<CameraBehavior> ();
+
 		StartCoroutine(SpawnPlayer ());
 
 		// UI initialization
@@ -87,18 +84,7 @@ public class GameControl : MonoBehaviour {
 		//healthSlider.maxValue = playerMaxHealth;
 	}
 
-	void LevelSetUp (Scene scene, LoadSceneMode mode)
-	{
-		Debug.Log ("Loaded");
-		pointsText = GameObject.FindGameObjectWithTag ("PointsText").GetComponent<Text> ();
-		slotOne = GameObject.FindGameObjectWithTag ("Inventory1").GetComponent<Image> ();
-		slotTwo = GameObject.FindGameObjectWithTag ("Inventory2").GetComponent<Image> ();
-	}
 
-	void OnDisable()
-	{
-		SceneManager.sceneLoaded -= LevelSetUp;
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -131,7 +117,7 @@ public class GameControl : MonoBehaviour {
 		spawnPoint = GameObject.FindGameObjectWithTag ("SpawnPoint");
 
 			Instantiate (player, spawnPoint.transform.position, spawnPoint.transform.rotation);
-			camB.SetTarget ();
+
 			playerRig = player.GetComponent<Rigidbody2D> ();
 			playerRig.velocity = new Vector2 (0, 0);
 			SetWeapon (weapon);
@@ -186,11 +172,8 @@ public class GameControl : MonoBehaviour {
 		Debug.Log ("level switch");
 		//yield return new WaitForSeconds (spawnDelay);
 		StartCoroutine (SpawnPlayer ());
-		camB.SetTarget ();
-		pointsText = GameObject.FindGameObjectWithTag ("PointsText").GetComponent<Text> ();
-		slotOne = GameObject.FindGameObjectWithTag ("Inventory1").GetComponent<Image> ();
-		slotTwo = GameObject.FindGameObjectWithTag ("Inventory2").GetComponent<Image> ();
 	
+
 	}
 
 }
