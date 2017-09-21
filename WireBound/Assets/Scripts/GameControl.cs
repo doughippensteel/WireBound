@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour {
 
@@ -17,7 +18,7 @@ public class GameControl : MonoBehaviour {
 	#region PublicVariables
 	public int playerMaxHealth;
 	public int currentPlayerHealth;
-	public int currentPoints;
+	public int currentPoints = 0;
 
 	public string weapon = null;
 
@@ -29,6 +30,8 @@ public class GameControl : MonoBehaviour {
 
 	#region PrivateVariables
 	int startingPoints = 0;
+	int previousScene;
+	float loadDelay = 1.5f;
 	float spawnDelay = .5f;
 	#endregion
 
@@ -39,21 +42,29 @@ public class GameControl : MonoBehaviour {
 
 	//public Slider healthSlider;
 	Rigidbody2D playerRig;
-	Text pointsText;
+	public Text pointsText;
 	Image slotOne;
 	Image slotTwo;
 
 	#endregion
 
+	void OnEneable()
+	{
+		SceneManager.sceneLoaded += LevelSetUp;
+	}
+
 	void Awake()
 	{
 		#region Singleton
-		if (gameControl == null)
+		if (gameControl == null){
+			DontDestroyOnLoad (gameObject);
 			gameControl = this;
-		else if  (gameControl != null)
-			Destroy (gameObject);
 
-		DontDestroyOnLoad (gameObject);
+		}
+		else if  (gameControl != this){
+			Destroy (gameObject);
+		}
+
 		#endregion
 	}
 
@@ -62,7 +73,7 @@ public class GameControl : MonoBehaviour {
 
 		playerMaxHealth = 2;
 
-		currentPoints = startingPoints;
+
 		gameControl = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameControl> ();
 		playerScript = player.GetComponent<Player> ();
 		camB = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<CameraBehavior> ();
@@ -75,10 +86,23 @@ public class GameControl : MonoBehaviour {
 
 		//healthSlider.maxValue = playerMaxHealth;
 	}
+
+	void LevelSetUp (Scene scene, LoadSceneMode mode)
+	{
+		Debug.Log ("Loaded");
+		pointsText = GameObject.FindGameObjectWithTag ("PointsText").GetComponent<Text> ();
+		slotOne = GameObject.FindGameObjectWithTag ("Inventory1").GetComponent<Image> ();
+		slotTwo = GameObject.FindGameObjectWithTag ("Inventory2").GetComponent<Image> ();
+	}
+
+	void OnDisable()
+	{
+		SceneManager.sceneLoaded -= LevelSetUp;
+	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		currentPoints = currentPoints;
 		pointsText.text = "" + currentPoints;
 		if (hasKey == true) {
 			slotOne.sprite = pickUps[1];
@@ -152,4 +176,21 @@ public class GameControl : MonoBehaviour {
 		Destroy (character.gameObject, .15f);
 		//gameControl.SpawnPlayer ();
 	}
+
+	public IEnumerator LoadShopLevel ()
+	{
+		yield return new WaitForSeconds (loadDelay);
+
+		previousScene = SceneManager.GetActiveScene ().buildIndex;
+		SceneManager.LoadScene (1, LoadSceneMode.Single);
+		Debug.Log ("level switch");
+		//yield return new WaitForSeconds (spawnDelay);
+		StartCoroutine (SpawnPlayer ());
+		camB.SetTarget ();
+		pointsText = GameObject.FindGameObjectWithTag ("PointsText").GetComponent<Text> ();
+		slotOne = GameObject.FindGameObjectWithTag ("Inventory1").GetComponent<Image> ();
+		slotTwo = GameObject.FindGameObjectWithTag ("Inventory2").GetComponent<Image> ();
+	
+	}
+
 }

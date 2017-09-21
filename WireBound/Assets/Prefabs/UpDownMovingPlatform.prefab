@@ -51,6 +51,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4035434550369514}
   - component: {fileID: 68507767763749118}
+  - component: {fileID: 68128553293897814}
+  - component: {fileID: 68789894432481798}
   m_Layer: 8
   m_Name: MovingPlat
   m_TagString: MovingPlatform
@@ -144,7 +146,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1546321993958108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.46616, y: 2.1532323, z: 0}
+  m_LocalPosition: {x: 28.608652, y: 3.0014434, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4035434550369514}
@@ -218,6 +220,24 @@ Transform:
   m_Father: {fileID: 4035434550369514}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &68128553293897814
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1427738295256058}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b840b208d92b2bc48b98e297eb8c5ecf, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.5062656, y: -0.3961413}
+  - {x: 1.4892159, y: 0.48713875}
+  - {x: 1.343399, y: 0.4855926}
 --- !u!68 &68507767763749118
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -233,12 +253,28 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.4571012, y: -0.47321326}
-  - {x: -1.4580554, y: 0.4924953}
+  - {x: -1.3174896, y: 0.4924953}
   - {x: -0.46470356, y: 0.49691105}
   - {x: 0.49265575, y: 0.48007393}
-  - {x: 1.4812083, y: 0.47727144}
-  - {x: 1.48487, y: -0.49170065}
+  - {x: 1.3662014, y: 0.49005032}
+--- !u!68 &68789894432481798
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1427738295256058}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: b840b208d92b2bc48b98e297eb8c5ecf, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.4725399, y: -0.38017535}
+  - {x: -1.4772396, y: 0.49092603}
+  - {x: -1.2947807, y: 0.50395346}
 --- !u!114 &114597760249622758
 MonoBehaviour:
   m_ObjectHideFlags: 1

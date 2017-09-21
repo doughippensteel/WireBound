@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Player : Character {
 
 	public GameControl gameControl;
+	public CameraBehavior camB;
 	public GameObject weapon;
 	public Slider healthBar;
 
@@ -22,12 +23,14 @@ public class Player : Character {
 		Debug.Log (transform.position);
 		anim = GetComponent<Animator>();
 		gameControl = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameControl> ();
+		camB = Camera.main.GetComponent<CameraBehavior> ();
 		armed = false;
 		weapon = GameObject.Find ("Weapon");
 		isDead = false;
 		healthBar.maxValue = gameControl.playerMaxHealth;
 		health = gameControl.playerMaxHealth;
 		Debug.Log (health);
+		camB.SetTarget ();
 	
 
 	}

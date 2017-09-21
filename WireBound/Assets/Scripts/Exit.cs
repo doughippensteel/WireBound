@@ -19,6 +19,8 @@ public class Exit : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 
 			anim.SetBool ("Unlocked", gameControl.hasKey);
+			StartCoroutine(gameControl.LoadShopLevel());
+
 		}
 	}
 }

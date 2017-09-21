@@ -20,6 +20,7 @@ public class Weapon : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
 		damage = player.attackDamage;
 		weaponRend = GetComponent<SpriteRenderer> ();
+		gameControl.SetWeapon (gameControl.weapon);
 	
 	}
 	
