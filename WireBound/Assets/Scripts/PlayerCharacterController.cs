@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCharacterController : MonoBehaviour {
+	GameControl gameControl;
+
 	#region PublicVariables
 	public float maxSpeed = 10f;
 	public float jumpForce = 700f;
@@ -36,6 +38,7 @@ public class PlayerCharacterController : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+		gameControl = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameControl> ();
 
 		rig = this.gameObject.GetComponent<Rigidbody2D> ();
 		spriteRend = gameObject.GetComponent<SpriteRenderer> ();
@@ -51,7 +54,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	 void Update () {
 
 		#region PlayerInputs
-		 moveX = Input.GetAxis ("Horizontal");
+		moveX = Input.GetAxis ("Horizontal");
 		 moveY = Input.GetAxis ("Vertical");
 
 		if ((grounded || climbable) && Input.GetButtonDown ("Jump")) 
@@ -75,7 +78,7 @@ public class PlayerCharacterController : MonoBehaviour {
 	{
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 
-		rig.velocity = new Vector2 ( moveX * maxSpeed, rig.velocity.y);
+		rig.velocity = new Vector2 ( moveX * (maxSpeed + gameControl.speedBonus), rig.velocity.y);
 
 		if (jump == true) {
 			rig.AddForce (new Vector2 (0, jumpForce));

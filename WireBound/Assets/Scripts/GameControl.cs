@@ -19,6 +19,9 @@ public class GameControl : MonoBehaviour {
 	public int playerMaxHealth;
 	public int currentPlayerHealth;
 	public int currentPoints = 0;
+	public int speedBonus;
+	public int healthBonus;
+	public int jumpBonus;
 
 	public string weapon = null;
 
@@ -130,6 +133,16 @@ public class GameControl : MonoBehaviour {
 
 
 
+	}
+
+	public void StatBonus(string bonusType, int bonus)
+	{
+		if (bonusType == "Speed")
+			speedBonus = speedBonus + bonus;
+		if (bonusType == "Health")
+			healthBonus = healthBonus + bonus;
+		if (bonusType == "Jump")
+			jumpBonus = jumpBonus + bonus;
 	}
 
 	public void SetWeapon(string weaponName)

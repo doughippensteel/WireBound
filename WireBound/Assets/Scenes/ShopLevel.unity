@@ -108,6 +108,12 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &19124349 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114342982039471380, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+    type: 2}
+  m_PrefabInternal: {fileID: 159054853}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &47805055
 Prefab:
   m_ObjectHideFlags: 0
@@ -157,6 +163,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114808381209204286, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4265944961504130, guid: e9b3bda492b1cd44d8e3a4da49de5483, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -210,9 +221,55 @@ Prefab:
       propertyPath: m_TagString
       value: ShopPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 114764265475772720, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+        type: 2}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808381209204286, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+        type: 2}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114049481491512716, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+        type: 2}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808381209204286, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808381209204286, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808381209204286, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1588622967}
+    - target: {fileID: 114808381209204286, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuySpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808381209204286, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9b3bda492b1cd44d8e3a4da49de5483, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &301456425 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114774794558505254, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+    type: 2}
+  m_PrefabInternal: {fileID: 159054853}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &497980003
 Prefab:
   m_ObjectHideFlags: 0
@@ -431,6 +488,15 @@ MonoBehaviour:
   gameControl: {fileID: 0}
   shopPanel: {fileID: 0}
   shopAnim: {fileID: 0}
+  speed: {fileID: 19124349}
+  health: {fileID: 301456425}
+  jump: {fileID: 1792372782}
+--- !u!114 &1792372782 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114653651423519844, guid: e9b3bda492b1cd44d8e3a4da49de5483,
+    type: 2}
+  m_PrefabInternal: {fileID: 159054853}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1793963420
 GameObject:
   m_ObjectHideFlags: 0
