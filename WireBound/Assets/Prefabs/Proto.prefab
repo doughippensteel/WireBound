@@ -169,6 +169,7 @@ MonoBehaviour:
   isDead: 0
   moveSpeed: 3
   spray: {fileID: 0}
+  moveRight: 1
   player: {fileID: 0}
   whatIsWall:
     serializedVersion: 2

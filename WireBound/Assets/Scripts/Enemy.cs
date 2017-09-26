@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent (typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(ParticleSystem))]
+
 public class Enemy : Character {
+
 
 	public float moveSpeed = 3;
 	public ParticleSystem spray;
 
-
-
-	bool moveRight = true;
+	public bool moveRight = true;
 	bool hitWall;
-
 
 	float wallCheckRadius = 0.2f;
 
 	public Player player;
 	public LayerMask whatIsWall;
-	[SerializeField]
-	Transform wallCheck;
+	public Transform wallCheck;
+
 	Rigidbody2D eRig;
 	Animator anim;
 	BoxCollider2D bColl;
@@ -57,8 +60,9 @@ public class Enemy : Character {
 		spray.Play ();
 	}
 
-	void FixedUpdate()
+	protected virtual void FixedUpdate()
 	{
+		
 		if (moveRight) {
 			transform.localScale = new Vector3 (-1, 1, 1);
 			eRig.velocity = new Vector2 (moveSpeed, eRig.velocity.y);
