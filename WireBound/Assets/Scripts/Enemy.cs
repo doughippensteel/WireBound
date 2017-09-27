@@ -62,14 +62,8 @@ public class Enemy : Character {
 
 	protected virtual void FixedUpdate()
 	{
-		
-		if (moveRight) {
-			transform.localScale = new Vector3 (-1, 1, 1);
-			eRig.velocity = new Vector2 (moveSpeed, eRig.velocity.y);
-		}else {
-			transform.localScale = new Vector3 (1, 1, 1);
-			eRig.velocity = new Vector2 (-moveSpeed, eRig.velocity.y);
-		}
+		Patrol ();
+
 	}
 
 
@@ -85,6 +79,17 @@ public class Enemy : Character {
 	{
 		if (other.gameObject.tag == "Enemy") {
 			moveRight = !moveRight;
+		}
+	}
+
+	protected virtual void Patrol(){
+
+		if (moveRight) {
+			transform.localScale = new Vector3 (-1, 1, 1);
+			eRig.velocity = new Vector2 (moveSpeed, eRig.velocity.y);
+		}else {
+			transform.localScale = new Vector3 (1, 1, 1);
+			eRig.velocity = new Vector2 (-moveSpeed, eRig.velocity.y);
 		}
 	}
 }
