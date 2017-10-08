@@ -23,7 +23,7 @@ public class Enemy : Character {
 	public Transform wallCheck;
 
 	Rigidbody2D eRig;
-	Animator anim;
+	public Animator anim;
 	BoxCollider2D bColl;
 
 

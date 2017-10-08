@@ -399,6 +399,18 @@ MonoBehaviour:
       serializedVersion: 2
       rgba: 4294936063
     prefab: {fileID: 1142447850956152, guid: 7fb4a2d3fa8beda42892cbc1c5456233, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4279106173
+    prefab: {fileID: 1362316656684050, guid: 903854ef4eae54746aea7e126ae34a76, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4280769018
+    prefab: {fileID: 1308175990508512, guid: ad993beb8676de5498e69b4814fae0a5, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4278845695
+    prefab: {fileID: 1824355162455594, guid: 21c8e519ddd29354da2eb13c45e889b2, type: 2}
 --- !u!212 &212675121171125980
 SpriteRenderer:
   m_ObjectHideFlags: 1

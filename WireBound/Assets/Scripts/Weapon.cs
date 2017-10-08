@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour {
 	public GameControl gameControl;
 	public Sprite[] weaponSprites;
 
-	SpriteRenderer weaponRend;
+	public SpriteRenderer weaponRend;
 	Player player;
 	Enemy enemy;
 	DestructableObject destructable;
@@ -34,6 +34,11 @@ public class Weapon : MonoBehaviour {
 			{ 
 			weaponRend.sprite = weaponSprites[0];
 			}
+		if (weaponName == ("Sword"))
+		{ 
+			weaponRend.sprite = weaponSprites[1];
+			damage = player.attackDamage + 1;
+		}
 	}
 
 	void OnTriggerEnter2D (Collider2D other){

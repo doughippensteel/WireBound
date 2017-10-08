@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1775035408981826}
+  m_IsPrefabParent: 1
+--- !u!1 &1775035408981826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4119556099958834}
+  - component: {fileID: 114011997718344390}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4119556099958834
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775035408981826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114011997718344390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775035408981826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20fa988a8d44915448bcdffd9932dd78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelMap: {fileID: 2800000, guid: 8dec6fbcac6f8654bb584a1edbf22ec7, type: 3}
+  colorToPrefab:
+  - color:
+      serializedVersion: 2
+      rgba: 4278190080
+    prefab: {fileID: 1140073404984050, guid: b3437d0065e29944b832caadd78c92f8, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282400832
+    prefab: {fileID: 1040431846116890, guid: e6d991c7dd8cd6047b02a901634a3b75, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4289111718
+    prefab: {fileID: 1187962448144218, guid: 2fdd56c3950e53444b58692c4e391e8f, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4280558636
+    prefab: {fileID: 1658825215576010, guid: 30e5aafd90261c64a973bfbc761cfc56, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4282006105
+    prefab: {fileID: 1772257398764620, guid: 9b76845bcf65ed948ab82a90d14fd47a, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4279106101
+    prefab: {fileID: 1853396398904100, guid: a392c19f199b188488681c7b76f2345a, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4279065082
+    prefab: {fileID: 1442410142899900, guid: 0fada59a1426c89448d05ac2851ceee3, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4294967040
+    prefab: {fileID: 1143191827285514, guid: aeed92b9806eed84cb854541d524fa95, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4294940928
+    prefab: {fileID: 1446997156382522, guid: d5b5548c12283554b8e7d4365e4b2fc3, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4294915072
+    prefab: {fileID: 1546321993958108, guid: 85b9a8b77ba4891409cc54c904300303, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4278255615
+    prefab: {fileID: 1936050808563730, guid: c82542aeba957514fa5714ec41960334, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4278190335
+    prefab: {fileID: 1026312931566598, guid: 5ed9e437cd8bce34eade2ab1724516cb, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4281925631
+    prefab: {fileID: 1630601047062698, guid: de4f6ce29c6832d4dbec38adb5b903c9, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4289111677
+    prefab: {fileID: 1515256743745126, guid: 29dd13f4f3654f948a05dc6b9b803b21, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4289111759
+    prefab: {fileID: 1032621374002324, guid: c10832c14978ae840b1a4ed1152420d9, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4294902015
+    prefab: {fileID: 1346282640375618, guid: d03ab2f99ef71464fbd54c9f3f33cf42, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4285595647
+    prefab: {fileID: 1576679560443250, guid: 1e897bd521b0ebe439dd8a84d5be3917, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4279107328
+    prefab: {fileID: 1818081559523806, guid: a696658ee2a5178459d1b5f676832c00, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4294936063
+    prefab: {fileID: 1142447850956152, guid: 7fb4a2d3fa8beda42892cbc1c5456233, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4279106173
+    prefab: {fileID: 1362316656684050, guid: 903854ef4eae54746aea7e126ae34a76, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4280769018
+    prefab: {fileID: 1308175990508512, guid: ad993beb8676de5498e69b4814fae0a5, type: 2}
+  - color:
+      serializedVersion: 2
+      rgba: 4278845695
+    prefab: {fileID: 1824355162455594, guid: 21c8e519ddd29354da2eb13c45e889b2, type: 2}

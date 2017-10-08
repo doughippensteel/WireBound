@@ -161,6 +161,11 @@ public class GameControl : MonoBehaviour {
 			hasWeapon = true;
 			weaponScript.SelectWeapon (weaponName);
 			break;
+		case "Sword":
+			slotTwo.sprite = pickUps [3];
+			hasWeapon = true;
+			weaponScript.SelectWeapon (weaponName);
+			break;
 		}
 	}
 	// Eliminate player
